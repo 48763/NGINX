@@ -5,9 +5,10 @@
 ```
 Server {
   listen 80;
-  
+  ...
   location / {
     proxy_pass https://yukifans.com;
+    ...
   }
   
 }
@@ -27,7 +28,7 @@ Server {
 範圍：location, limit_except
 ```
 ### 範例：
-1. 這是最一般的設定，直接讓 `NGINX` 預設網頁位址，映射到該網站的 `/ie` 位置(目錄)。
+#### 1. 這是最一般的設定，直接讓 `NGINX` 預設網頁位址，映射到該網站的 `/ie` 位置(目錄)。
 ```nginx 
 location / {
   proxy_pass https://yukifans.com:443/ie;
@@ -39,7 +40,7 @@ URL 的映射關係：
 http://ip-address/ => https://yukifans/ie
 ```
 
-2. `NGINX` 的 `/yuki/` 位址，映射到目標網站的 `/yuki/` 位址。
+#### 2. `NGINX` 的 `/yuki/` 位址，映射到目標網站的 `/yuki/` 位址。
 ```nginx
 location /yuki/ {
   proxy_pass https://yukifans.com:443;
@@ -52,7 +53,7 @@ http://ip-address/yuki/ => https://yukifans/yuki/
 ```
 ***ps. 在此範例中所連結的網頁位址是不存在的，所以請放心***
 
-3. `NGINX` 的 `/yuki/` 位址，映射到目標網站的預設位址。
+#### 3. `NGINX` 的 `/yuki/` 位址，映射到目標網站的預設位址。
 ```nginx
 location /yuki/ {
   proxy_pass https://yukifans.com:443/;
