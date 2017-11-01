@@ -114,7 +114,7 @@ Date:Fri, 06 Oct 2017 21:13:51 GMT
 Server:nginx/1.4.6 (Ubuntu)
 Vary:Accept-Encoding,Cookie
 ```
-*可與 `proxy_pass_header` 一起看，比較之間的差異。
+*可與 `proxy_pass_header` 一起看，比較之間的差異。*
 
 ## proxy_pass_header
 允許標頭欄位從受代理的伺服器傳送到用戶端。該方法與 `proxy_hide_header` 相反。
@@ -158,7 +158,6 @@ Vary:Accept-Encoding,Cookie
 範圍：http, server, location
 ```
 
-
 ## proxy_ignore_client_abort
 當用戶端關閉連線不等待回應時，是否要關閉與受代理的伺服器連線？
 
@@ -184,6 +183,9 @@ $ sudo vi /var/log/nginx/access.log
 
 10.211.55.2 - - [07/Oct/2017:06:58:45 +0800] "GET /yuki/ HTTP/1.1" 499 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
 ```
+
+*補充：
+499 Client Closed Request*
 
 #### on
 當設定為 `on` 時，使用瀏覽器重整再停止，就可以看到下列訊息。
