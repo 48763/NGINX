@@ -158,7 +158,8 @@ Vary:Accept-Encoding,Cookie
 預設：none
 範圍：http, server, location
 ```
-If not disabled, processing of these header fields has the following effect:
+
+如果沒有禁用，在處理這些標頭欄位時，將會有以下效果：
 
 - `X-Accel-Expires`, `Expires`, `Cache-Control`, `Set-Cookie`, & `Vary`：設定回應快取的參數。
 - `X-Accel-Redirect`：執行內部重新導向到指定的 `URI`。
