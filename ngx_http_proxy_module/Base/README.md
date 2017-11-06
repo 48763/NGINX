@@ -20,6 +20,7 @@ Server {
 - [proxy_http_version](#proxy_http_version)
 - [proxy_hide_header](#proxy_hide_header)
 - [proxy_pass_header](#proxy_pass_header)
+- [proxy_ignore_headers](#proxy_ignore_headers)
 - [proxy_ignore_client_abort](#proxy_ignore_client_abort)
 
 ## proxy_pass
@@ -157,6 +158,13 @@ Vary:Accept-Encoding,Cookie
 預設：none
 範圍：http, server, location
 ```
+If not disabled, processing of these header fields has the following effect:
+
+- `X-Accel-Expires`, `Expires`, `Cache-Control`, `Set-Cookie`, & `Vary`：設定回應快取的參數。
+- `X-Accel-Redirect`：執行內部重新導向到指定的 `URI`。
+- `X-Accel-Limit-Rate`：設置對用戶端傳送速率的限制。
+- `X-Accel-Buffering`：enables or disables buffering of a response。
+- `X-Accel-Charset`：sets the desired charset of a response。
 
 ## proxy_ignore_client_abort
 當用戶端關閉連線不等待回應時，是否要關閉與受代理的伺服器連線？
@@ -185,7 +193,7 @@ $ sudo vi /var/log/nginx/access.log
 ```
 
 *補充：
-499 Client Closed Request*
+499 - Client Closed Request*
 
 #### on
 當設定為 `on` 時，使用瀏覽器重整再停止，就可以看到下列訊息。
