@@ -21,6 +21,7 @@ Server {
 - [proxy_hide_header](#proxy_hide_header)
 - [proxy_pass_header](#proxy_pass_header)
 - [proxy_ignore_headers](#proxy_ignore_headers)
+- [proxy_intercept_errors](#proxy_intercept_errors)
 - [proxy_ignore_client_abort](#proxy_ignore_client_abort)
 
 ## proxy_pass
@@ -150,11 +151,11 @@ Vary:Accept-Encoding,Cookie
 
 *可與 `proxy_hide_header` 一起看，比較之間的差異。*
 
-## proxy_ignore_headers field ...;
+## proxy_ignore_headers 
 不處理受代理的伺服器所回應的某些標頭欄位。
 
 ```nginx
-語法：proxy_ignore_headers
+語法：proxy_ignore_headers field ...;
 預設：none
 範圍：http, server, location
 ```
@@ -166,16 +167,14 @@ Vary:Accept-Encoding,Cookie
 - `X-Accel-Buffering`：啟用或禁用回應的緩衝。
 - `X-Accel-Charset`：設定需要的字符回應。
 
-
-
 ## proxy_intercept_errors
+是否讓代理狀態碼大於或等於 300 的回應，通過到用戶端，或是攔截並重新導向至 `NGINX`，讓 `error_page` 指令進行處理。
 
 ```nginx
 語法：proxy_intercept_errors on | off
 預設：proxy_intercept_errors off;
 範圍：http, server, location
 ```
-
 
 ## proxy_ignore_client_abort
 當用戶端關閉連線不等待回應時，是否要關閉與受代理的伺服器連線？
@@ -214,7 +213,6 @@ $ sudo vi /var/log/nginx/access.log
 
 10.211.55.2 - - [07/Oct/2017:07:03:35 +0800] "GET /yuki/ HTTP/1.1" 200 5397 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
 ```
-
 ## 
 
 ```nginx
