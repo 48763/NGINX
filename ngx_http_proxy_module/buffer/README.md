@@ -7,12 +7,12 @@
 
 ## proxy_buffering
 啟用或禁用代理伺服器的請求緩衝。
+
 ```nginx
 語法：proxy_buffering on | off;
 預設：proxy_buffering on;
 範圍：http, server, location
 ```
-
 *相關：proxy_buffer_size, proxy_buffers, proxy_max_temp_file_size, proxy_temp_file_write_size, proxy_temp_path*
 
 ## proxy_buffer_size
@@ -21,6 +21,16 @@
 ```nginx
 語法：proxy_buffer_size size;
 預設：proxy_buffer_size 4k|8k;
+範圍：http, server, location
+```
+*p.s 4K 或 8K 取決於平台。*
+
+## proxy_buffers
+設定 `number` 和 `size`，對於單一連線，所讀取收到代理伺服器回應的緩衝區。
+
+```nginx
+語法：proxy_buffers number size;
+預設：proxy_buffers 8 4k|8k;
 範圍：http, server, location
 ```
 *p.s 4K 或 8K 取決於平台。*
