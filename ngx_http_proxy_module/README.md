@@ -6,14 +6,14 @@
 - [Buffer](#buffer)
 - [SSL](#ssl)
 
-### Proxy
+### [Proxy](proxy)
 代理請求的代理設定。（e.g. header）
 - list 
 
-### Buffer
+### [Buffer](buffer)
 代理請求的緩衝設定。（e.g. beffer, cache）
 - list 
 
-### SSL
+### [SSL](ssl)
 代理請求的憑證設定。（e.g. SSL）
 - list 
