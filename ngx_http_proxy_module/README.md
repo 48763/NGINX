@@ -2,9 +2,9 @@
 該模組設定請求通過到其它服務器的相關需求設定。
 
 ## Table of contents
-- [Proxy](Proxy)
-- [Buffer](Buffer)
-- [SSL](SSL)
+- [Proxy](proxy)
+- [Buffer](buffer)
+- [SSL](ssl)
 
 ### Proxy
 代理請求的代理設定。（e.g. header）
