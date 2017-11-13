@@ -8,7 +8,8 @@
 
 ### [Proxy](proxy)
 代理請求的代理設定。（e.g. header）
-- list 
+- [proxy_bind](proxy#proxy_bind)
+- 
 
 ### [Buffer](buffer)
 代理請求的緩衝設定。（e.g. beffer, cache）
