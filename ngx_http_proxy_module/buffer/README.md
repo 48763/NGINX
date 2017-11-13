@@ -3,6 +3,7 @@
 ## Table of Contents
 - [proxy_buffering](#proxy_buffering)
 - [proxy_buffer_size](#proxy_buffer_size)
+- [proxy_buffers](#proxy_buffers)
 - [proxy_limit_rate](#proxy_limit_rate)
 
 ## proxy_buffering
