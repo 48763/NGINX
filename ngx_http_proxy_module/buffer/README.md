@@ -1,19 +1,5 @@
 # Buffer
 
-## Foreword
-
-```nginx
-Server {
-  listen 80;
-  ...
-  location / {
-    proxy_pass https://yukifans.com;
-    ...
-  }
-  
-}
-```
-
 ## Table of Contents
 - [proxy_limit_rate](#proxy_limit_rate)
 
