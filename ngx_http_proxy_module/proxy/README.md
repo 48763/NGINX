@@ -1,19 +1,5 @@
 # Proxy
 
-## Foreword
-
-```
-Server {
-  listen 80;
-  ...
-  location / {
-    proxy_pass https://yukifans.com;
-    ...
-  }
-  
-}
-```
-
 ## Table of Contents
 - [proxy_pass](#proxy_pass)
 - [proxy_bind](#proxy_bind)
