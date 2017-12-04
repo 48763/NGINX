@@ -5,6 +5,8 @@
 - [proxy_buffer_size](#proxy_buffer_size)
 - [proxy_buffers](#proxy_buffers)
 - [proxy_busy_buffers_size](#proxy_busy_buffers_size)
+- [proxy_cache](#proxy_cache)
+- [proxy_cache_background_update](#proxy_cache_background_update)
 - [proxy_limit_rate](#proxy_limit_rate)
 
 
@@ -50,6 +52,26 @@
 範圍：http, server, location
 ```
 *p.s 一般 `size` 會設置為 `proxy_buffers` 單一分頁大小的兩倍*
+
+
+## proxy_cache
+定義給快取使用的共享記憶體區塊。
+
+```nginx
+語法：proxy_cache zone | off;
+預設：proxy_cache off;
+範圍：http, server, location
+```
+
+
+## proxy_cache_background_update
+允許在背景用子請求來更新已過期的快取項目，而過期的快取請求會回傳給用戶端。
+
+```nginx
+語法：proxy_cache_background_update on | off;
+預設：proxy_cache_background_update off;
+範圍：http, server, location
+```
 
 ## proxy_limit_rate
 限制從受代理的伺服器讀取回應的速度。限制每個請求在每秒傳送多少 `Bytes`(Byte/Second)。 
