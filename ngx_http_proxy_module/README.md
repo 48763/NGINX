@@ -35,6 +35,7 @@ Server {
 - [proxy_buffer_size](buffer#proxy_buffer_size)
 - [proxy_buffering](buffer#proxy_buffering)
 - [proxy_buffers](buffer#proxy_buffers)
+- [proxy_busy_buffers_size](buffer#proxy_busy_buffers_size)
 
 ### [SSL](ssl)
 代理請求的憑證設定。（e.g. SSL）
