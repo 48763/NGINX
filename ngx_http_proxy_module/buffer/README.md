@@ -18,7 +18,12 @@
 預設：proxy_buffering on;
 範圍：http, server, location
 ```
-*相關：proxy_buffer_size, proxy_buffers, proxy_max_temp_file_size, proxy_temp_file_write_size, proxy_temp_path*
+*相關：
+proxy_buffer_size, 
+proxy_buffers, 
+proxy_max_temp_file_size, 
+proxy_temp_file_write_size, 
+proxy_temp_path*
 
 
 ## proxy_buffer_size
@@ -29,7 +34,7 @@
 預設：proxy_buffer_size 4k|8k;
 範圍：http, server, location
 ```
-*p.s 4K 或 8K 取決於平台。*
+> 4K 或 8K 取決於平台。
 
 
 ## proxy_buffers
@@ -40,7 +45,7 @@
 預設：proxy_buffers 8 4k|8k;
 範圍：http, server, location
 ```
-*p.s 4K 或 8K 取決於平台。*
+> 4K 或 8K 取決於平台。
 
 
 ## proxy_busy_buffers_size
@@ -51,7 +56,7 @@
 預設：proxy_busy_buffers_size 8k|16k;
 範圍：http, server, location
 ```
-*p.s 一般 `size` 會設置為 `proxy_buffers` 單一分頁大小的兩倍*
+> 一般 `size` 會設置為 `proxy_buffers` 單一分頁大小的兩倍。
 
 
 ## proxy_cache
@@ -81,4 +86,4 @@
 預設：proxy_limit_rate 0;
 範圍：http, server, location
 ```
-*p.s 只有在啟用回應緩衝時，限制才有作用。*
+> 只有在啟用回應緩衝時，限制才有作用。
